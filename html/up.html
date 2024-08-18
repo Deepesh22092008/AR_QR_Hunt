@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AR QR Code Hunt - Down</title>
+  <!-- A-Frame library -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <!-- AR.js library -->
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    a-scene { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+  <a-scene embedded arjs>
+    <a-assets>
+      <!-- Load assets like images -->
+      <img id="arrow-image" src="../images/up.png" />
+    </a-assets>
+    <!-- Define the marker and AR content -->
+    <a-marker preset="hiro">
+      <a-image src="#arrow-image" position="0 0 0" rotation="0 0 0" scale="2 2 2"></a-image>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
